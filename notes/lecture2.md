@@ -28,6 +28,16 @@ The value of *|f|* of a flow is the amount of the good sent from *s* to *t*.
 **ie** flow.out(s) = *|f|* = flow.in(t)
 - We may assume there are no arcs into *s* or out of *t* as they are not useful for us.
 
-Max-Flow Porblem: Find an *s-t* flow *f** of maximum value.
+Max-Flow Problem: 
+----------------
+Find an *s-t* flow *f** of maximum value.
+
 - *Informally, we are trying to **fit** as many *s-t* paths into *G* as possible*
 - Extensions: lower bounds on the arcs; multiple sources/sinks
+
+Solution to Max-Flow -- **Ford-Fulkerson**
+- find some max flow using this algorithm:
+    1. let *f = 0*
+    2. Repeat:
+        - Find an **augmenting path** P w.r.t. *f* 
+        - Augment flow on *P* by *b(P)*
