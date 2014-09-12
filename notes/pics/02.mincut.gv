@@ -1,0 +1,21 @@
+digraph mincut {
+    /* this needs a bit of work */
+    rankdir=LR;
+    node [shape=point];
+
+    subgraph cluster {
+
+        s [xlabel="s"];
+        s -> a -> b;
+
+        {rank=source s};
+        {rank=same a, b};
+    }
+
+    t [xlabel="t"];
+
+    b -> t [style="invis"];
+
+
+    {rank=max t}
+}

@@ -1,0 +1,9 @@
+digraph Gf {
+    rankdir=LR;
+    node [shape=point];
+    i [xlabel="i"];
+    j [xlabel="j"];
+
+    i -> j [label="Uij - Fij"];
+    j -> i [label="Fij"]
+}

@@ -1,0 +1,19 @@
+digraph G {
+    rankdir = LR;
+    node[shape="point"];
+    s [xlabel="s"];
+    t [xlabel="t"];
+    i [xlabel="i"];
+    j [xlabel="j"];
+
+    s -> {i, a};
+    i -> {a, b};
+    i -> j [label="Uij"];
+    a -> {b, c};
+    b -> {c, j};
+    c -> {a, t};
+    j -> {t};
+
+    {rank=same i, a};
+    {rank=same j, c}
+}
