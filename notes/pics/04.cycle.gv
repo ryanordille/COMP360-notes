@@ -1,0 +1,34 @@
+digraph G_with_C {
+    rankdir = LR;
+    node [shape=point];
+
+    s [xlabel="s"];
+    t [xlabel="t"];
+
+    /* our cycle */
+    c1 -> c2 [label="3"];
+    c2 -> c3 [label="2"];
+    c3 -> c4 [label="8"];
+    c4 -> c1 [label="7"];
+
+
+    /* some samples */
+    edge [style=dotted]
+    s -> a;
+    s -> b;
+    b -> c;
+    b -> d;
+    e -> t;
+    f -> t;
+
+    /* fake edges to align everything */
+    edge [style=invis];
+    a -> c1;
+    c3 -> e;
+
+    {rank=same a, b}
+    {rank=same c, d, c1}
+    {rank=same c2, c4}
+    {rank=same e, f}
+
+}

@@ -1,0 +1,18 @@
+digraph bad_example_1 {
+    rankdir = LR;
+
+    node [shape=point];
+
+    s [xlabel="s"];
+    t [xlabel="t"];
+
+    s -> a [label="U"];
+    s -> b [label="U", color=red];
+
+    b -> a [label="1", color=red];
+
+    a -> t [label="U", color=red];
+    b -> t [label="U"];
+
+    {rank=same a, b};
+}

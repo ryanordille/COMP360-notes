@@ -1,0 +1,16 @@
+digraph greedy {
+    rankdir = LR;
+    node [shape=point];
+
+    s [xlabel="s"];
+    t [xlabel="t"];
+
+    s -> top [label="5", color=red];
+    top -> bottom [label="1", color=red];
+    bottom -> top [label="3"];
+    top -> t [label="4"];
+    bottom -> t [label="2", color=red];
+
+    {rank=same top, bottom};
+
+}

@@ -1,0 +1,12 @@
+digraph s_t {
+    rankdir=LR;
+    node [shape=point];
+
+    s [xlabel="s"];
+    t [xlabel="t"];
+
+    s -> a [label="3"];
+    a -> b [label="2"];
+    b -> c [label="7"];
+    c -> t [label="11"];
+}

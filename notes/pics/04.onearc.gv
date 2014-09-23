@@ -1,0 +1,23 @@
+digraph one_arc {
+    rankdir=LR;
+    node [shape=point];
+
+    s [xlabel="s"];
+    t [xlabel="t"];
+
+    s -> t [label="m=1"];
+
+    a;
+    b;
+    c;
+    d;
+    e;
+    f;
+
+    s -> e [style="invis"];
+    e -> t [style="invis"];
+
+    {rank=same s, a, b};
+    {rank=same d, e};
+    {rank=same c, t, d};
+}
